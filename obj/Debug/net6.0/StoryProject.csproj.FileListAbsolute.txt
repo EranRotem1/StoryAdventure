@@ -1,0 +1,15 @@
+C:\Users\eran rotem\Desktop\repo\StoryProject\bin\Debug\net6.0\StoryProject.exe
+C:\Users\eran rotem\Desktop\repo\StoryProject\bin\Debug\net6.0\StoryProject.deps.json
+C:\Users\eran rotem\Desktop\repo\StoryProject\bin\Debug\net6.0\StoryProject.runtimeconfig.json
+C:\Users\eran rotem\Desktop\repo\StoryProject\bin\Debug\net6.0\StoryProject.dll
+C:\Users\eran rotem\Desktop\repo\StoryProject\bin\Debug\net6.0\StoryProject.pdb
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.csproj.AssemblyReference.cache
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.AssemblyInfoInputs.cache
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.AssemblyInfo.cs
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.csproj.CoreCompileInputs.cache
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.dll
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\refint\StoryProject.dll
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.pdb
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\StoryProject.genruntimeconfig.cache
+C:\Users\eran rotem\Desktop\repo\StoryProject\obj\Debug\net6.0\ref\StoryProject.dll
