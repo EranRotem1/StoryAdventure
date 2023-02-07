@@ -187,7 +187,8 @@ namespace StoryProject
                     }
                     break;
                 case 2:
-                    var sassy = UserInput3(1.2);
+                    Console.WriteLine(txt[1.2]);
+                    OpenDoorSeq();
                     break;
 
                 case 3:
@@ -241,17 +242,17 @@ namespace StoryProject
         public static Dictionary<double, string> txt = new Dictionary<double, string>(){
             {0.0, "Let's write a little story! \n-Type the number that correlates to your choice \n-You can type in Health to any prompt to display your remaining health points," +
                 " afterwards you will still input your choice \n-Your choices and health do matter, your selections determine the length and content of your story and ultimately" +
-                " change the outcome, if you get to 0 health you will die and the story will end. \n-You are encouraged to play multiple times, there are many options, some " +
-                "resulting in a very long or very short story, both can be fun!\nWhere would you like to start? : \n1. Dungeon \n2. Castle \n3. Village \n" },
+                " change the outcome, if you get to 0 health you will die and the story will end. \n-This is a Demo but still you are encouraged to play multiple times, there are many options, some " +
+                "resulting in a long or very short story, both can be fun! And be careful. \nWhere would you like to start? : \n1. Dungeon \n2. Castle \n3. Village \n" },
             {0.1, "Well that's fortunate, because that's where you're going.\n" },
-            {0.2, "Wouldn't we all? well I guess technically this is part of a castle.\n" },
+            {0.2, "Wouldn't we all? But you're going to the dungeons.\n" },
             {0.3, "Humble, I'm afraid it's much worse than that.\n" },
             {1.0, $"(Health: {Health}) \nYour eyes slowly open, woken up by the sound of dripping on cold stone. Your wrists, bruised and shackled, sink to the floor like stones. As you " +
                 "sit there, back against the rough rocky cell wall, clinging to restless consciousness, you notice that the constant moaning of pain that fills the dungeon halls " +
                 "has quieted. \n You hear a faint whisper \"Hey…\" \n \"Yea you, hey\" \nWhat do you say? \n1. \"What? Who’s there?\" \n2. \"I know you’re not really " +
                 "here!\" \n3. \"Alright, well I have no plans today, what’s up?\"\n" },
             {1.1, "\"Would you like to leave this place?\" \n1. \"Yes\" \n2. \"I don’t trust you\"\n" },
-            {1.2, "\"Oh I’m no figment of your imagination my friend\" \n" },
+            {1.2, "\"Oh I’m no figment of your imagination my friend, I'm here to help\" \n" },
             {1.3, "\"You seem cool so I’m gonna be straight with you, I’m also trapped in this prison, but together we can escape, scratch my back I scratch yours type of deal.\" \n1. First" +
                 " exciting thing that’s happened around here since John brought me a cookie, let’s do it. \n2. How likely am I to die? \n3. Can you give me more information?\n" },
             {1.11, "\"Well today’s your lucky day… I can get you out of here but you have to listen to everything I say, ok?\" \n1. What’s in it for you? \n2. I can do that. \n3. Sounds" +
