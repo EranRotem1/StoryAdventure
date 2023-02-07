@@ -4,20 +4,22 @@ namespace StoryProject
 {
     public class Story
     {
-        public int health = 60;
-        public int Health
+        private static int health = 60;
+        public static int Health
         { get { return health; } set { health = value; } }
 
-
+        //path has 3 options 
         public static int UserInput3(double txtKey)
         {
             Console.WriteLine(txt[txtKey]);
             var i = Console.ReadLine();
             string[] options = { "1", "2", "3", "health" };
-            //if (i.ToLower() == "health")
-            //{
-            //    Console.WriteLine(Health: {health});
-            //}
+            if (i.ToLower() == "health")
+            {
+                Console.WriteLine($"Health: { Health }");
+                Console.WriteLine("Awaiting story path selection:");
+                i = Console.ReadLine();
+            }
             while (!options.Contains(i))
             {
                 Console.WriteLine("Sorry, option unavailable.");
@@ -26,11 +28,18 @@ namespace StoryProject
             return int.Parse(i);
         }
 
+        //path has 2 options 
         public static int UserInput2(double txtKey)
         {
             Console.WriteLine(txt[txtKey]);
             var i = Console.ReadLine();
-            string[] options = { "1", "2" };
+            string[] options = { "1", "2", "health" };
+            if (i.ToLower() == "health")
+            {
+                Console.WriteLine($"Health: {Health}");
+                Console.WriteLine("Awaiting story path selection:");
+                i = Console.ReadLine();
+            }
             while (!options.Contains(i))
             {
                 Console.WriteLine("Sorry, option unavailable.");
@@ -39,8 +48,10 @@ namespace StoryProject
             return int.Parse(i);
         }
 
+        //unlock cell gate too walk out sequence 
         public static void OpenDoorSeq()
         {
+            Health -= 5;
             var door_open = UserInput2(1.1211);
             switch (door_open)
             {
@@ -54,6 +65,7 @@ namespace StoryProject
                     switch (distract)
                     {
                         case 1:
+                            Health -= 5;
                             var scream = UserInput2(1.121121);
                             switch (scream)
                             {
@@ -93,7 +105,7 @@ namespace StoryProject
             }
         }
 
-
+        //story game structure method
         public static void StoryAdventure()
         {
             var intro = UserInput3(0);
@@ -185,12 +197,13 @@ namespace StoryProject
 
         }
 
+        //main method
         static void Main(string[] args)
         {
-            //OpenDoorSeq();
             StoryAdventure();
         }
 
+        //path library
         public static Dictionary<double, string> txt = new Dictionary<double, string>(){
             {0.0, "Let's write a little story! \n-Type the number that correlates to your choice \n-You can type in Health to any prompt to display your remaining health points," +
                 " afterwards you will still input your choice \n-Your choices and health do matter, your selections determine the length and content of your story and ultimately" +
@@ -199,7 +212,7 @@ namespace StoryProject
             {0.1, "Well that's fortunate, because that's where you're going.\n" },
             {0.2, "Wouldn't we all? well I guess technically this is part of a castle.\n" },
             {0.3, "Humble, I'm afraid it's much worse than that.\n" },
-            {1.0, "(Health: 60) \nYour eyes slowly open, woken up by the sound of dripping on cold stone. Your wrists, bruised and shackled, sink to the floor like stones. As you " +
+            {1.0, $"(Health: {Health}) \nYour eyes slowly open, woken up by the sound of dripping on cold stone. Your wrists, bruised and shackled, sink to the floor like stones. As you " +
                 "sit there, back against the rough rocky cell wall, clinging to restless consciousness, you notice that the constant moaning of pain that fills the dungeon halls " +
                 "has quieted. \n You hear a faint whisper \"Hey…\" \n \"Yea you, hey\" \nWhat do you say? \n1. \"What? Who’s there?\" \n2. \"I know you’re not really " +
                 "here!\" \n3. \"Alright, well I have no plans today, what’s up?\"\n" },
@@ -212,14 +225,14 @@ namespace StoryProject
             {1.121, "\"That’s kinda what I thought, listen there’s not time to explain, there’s only a small interval of time to make this work, are you in?\" \n1. \"Yes!\" \n2. " +
                 "\"Nah, you know what? I’m not getting killed over this.\"\n" },
             {1.122, "You settle back into your cold, damp, and hostile life. You rot away in the dungeon, the few weeks you have left are spent thinking about that mysterious voice that once offered you help." },
-            {1.1211, "Your cell door clicks and starts to slowly open, you stand up in excitement but the heft and short chain of your irons pull you back (-5 Health). \n1. \"Hey! " +
+            {1.1211, $"Your cell door clicks and starts to slowly open, you stand up in excitement but the heft and short chain of your irons pull you back (-5 Health). \n1. \"Hey! " +
                 "What about my shackles?\" \n2. Alright, I can figure this out… lure a guard. \n" },
             {1.1212, "\"Your lossss……\" The voice echoes and fades.\n " },
             {1.12111, "\"Oh yea, right.\" \nThe rod that kept your cuffs linked turns to dust, separating your hands with a jolt, the heavy restraints finally fall off of your wrists\n" },
             {1.12112, "1. Start screaming in terror \n2. \"Help! Guard! Please help!\" \n3. \"Hey, my cell just opened, I did not do this, I am still restrained. Just wanna make sure I’m gonna get in trouble for this.\" \n" },
             {1.121121, "You shout your head off until a guard rushes over to find your cell open, you still shackled, standing facing the wall and screaming in horror as if you were face " +
                 "to face with a demon. \n\"What’s wrong with you!?\" He walks in front of you in an attempt to snap you out of it. As he places both hands aggressively on your shoulders " +
-                "you rear back and head slam him square on the nose. (-5 Health) \nThe guard is rendered unconscious allowing you to release him of his keys and unlock your cuffs. \nTake his " +
+                $"you rear back and head slam him square on the nose. (-5 Health) \nThe guard is rendered unconscious allowing you to release him of his keys and unlock your cuffs. \nTake his " +
                 "uniform? \n1. Yes, of course \n2. No, that’s gonna backfire\n" },
             {1.121122, "The rushing footsteps of a guard rapidly approach your cell, \"Help!\" you shout again, \"I don’t know how, but that thing opened the cell and blended into the wall! " +
                 "I think it wants to eat me in my sleep!\" the guard sprints into the cell, glancing at your irons and turning to look at the wall in reference. As he does you kick the back of " +
