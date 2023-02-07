@@ -192,6 +192,40 @@ namespace StoryProject
 
                 case 3:
                     var cool = UserInput3(1.3);
+                    switch (cool)
+                    {
+                        case 1:
+                            Console.WriteLine(txt[1.31]);
+                            OpenDoorSeq();
+                            break;
+                        case 2:
+                            var safety = UserInput2(1.32);
+                            switch (safety) 
+                            {
+                                case 1:
+                                    Console.WriteLine(txt[1.321]);
+                                    OpenDoorSeq();
+                                    break;
+                                case 2:
+                                    Console.WriteLine(txt[1.1212]);
+                                    Console.WriteLine(txt[1.122]);
+                                    break;
+                            }
+                            break;
+                        case 3:
+                            var inout = UserInput2(1.33);
+                            switch (inout)
+                            {
+                                case 1:
+                                    OpenDoorSeq();
+                                    break;
+                                case 2:
+                                    Console.WriteLine(txt[1.1212]);
+                                    Console.WriteLine(txt[1.122]);
+                                    break;
+                            }
+                            break;
+                    }
                     break;
             }
 
@@ -218,7 +252,8 @@ namespace StoryProject
                 "here!\" \n3. \"Alright, well I have no plans today, what’s up?\"\n" },
             {1.1, "\"Would you like to leave this place?\" \n1. \"Yes\" \n2. \"I don’t trust you\"\n" },
             {1.2, "\"Oh I’m no figment of your imagination my friend\" \n" },
-            {1.3, "\"You seem cool so I’m gonna be straight with you, I’m also trapped in this prison, but together we can escape, scratch my back I scratch yours type of deal.\"\n" },
+            {1.3, "\"You seem cool so I’m gonna be straight with you, I’m also trapped in this prison, but together we can escape, scratch my back I scratch yours type of deal.\" \n1. First" +
+                " exciting thing that’s happened around here since John brought me a cookie, let’s do it. \n2. How likely am I to die? \n3. Can you give me more information?\n" },
             {1.11, "\"Well today’s your lucky day… I can get you out of here but you have to listen to everything I say, ok?\" \n1. What’s in it for you? \n2. I can do that. \n3. Sounds" +
                 " like a trap, I’m sure one of these other sad souls will happily die for your amusement.\n" },
             {1.12, "\"Fine then, I’m perfectly content letting you rot here.\" \n1. \"Woah, woah, wait! What do I need to do?\" \n2. Lower your head and tune back into the familiar screaming of your cellmates \n" },
@@ -249,7 +284,12 @@ namespace StoryProject
                 "on your way out. \n1. I see, you need some foolhardy worthless soul to risk his life so you can steal something, thank you, I'll wait for my next exciting opportunity. \n2. Sounds like a fair exchange." },
             {1.112, "There’s a smart cookie, trust me this’ll be worth your time." },
             {1.113, "Fine I’m sure so too" },
-            {1.1112, "There’s a smart lad." }
+            {1.1112, "There’s a smart lad." },
+            {1.31, "That’s what I like to hear" },
+            {1.32, "I mean we’re escaping from a dungeon, I’m not gonna tell you this is safe… or smart \n1. Yea alright, what do we do? \n2. Pass\n" },
+            {1.33, "Not really, I already wasn’t planning on telling you the truth, listen we don't have a ton of time, in or out? \n1. In \n2. Out \n" },
+            {1.321, "Just listen to everything I say and we’ll be out in no time" },
+            {1.332, "Suit yourself" }
         };
        
 
